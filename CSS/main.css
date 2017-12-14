@@ -1,0 +1,98 @@
+
+/*
+Layout
+
+In your webpage there will be 3 layouts. Use percentages to control the width of the <li> elements and the margins between them.
+
+1. Less than 600px - one column layout
+
+2. Between 600px and 1200px - two column layout
+
+3. Above 1200px - four column layout
+
+ 
+
+Transitions and Transforms
+
+Each image should have a transition and transform applied in CSS
+
+The transition property should be your transform which must have a minimum duration of 0.2s and must specify a transition-timing-function property such as "ease-in".
+
+You can use any tranform you wish:  scale, rotate, translate etc.
+
+The transition effect should start with a hover event over any image.
+
+*/
+
+
+/*
+************************************************************************************
+		ATTRIBUTION
+		All images used belong to:
+		Markus Spiske - https://500px.com/markusspiske  
+		Yinan Chen - https://500px.com/webmaster85
+		Fahim Akhter - https://500px.com/fahimakhter 
+*/
+
+
+body{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	line-height: 1.5;
+    background-color: antiquewhite;
+  
+}
+
+
+ul{
+  list-style: none;
+}
+li{
+  margin-top:2.5%;
+  float:left;
+}
+img{
+  width:90%;
+  transition:transform 0.6s ease-in-out;
+  border: 2px solid grey;
+}
+
+
+
+img:hover{
+cursor: pointer;
+    border:2px solid black;
+transition:  2s ease-out;
+transform:skew(5deg, 5deg);
+    
+}
+
+
+
+/**********************LAYOUT**************************/
+
+
+@media screen and (min-width: 600px){
+ /*two column*/
+  li{
+    width:50%;
+  }
+    img:hover{
+        transform:translate(30px, 80px);
+        transform:rotate(30deg);
+    }
+    
+}
+
+@media screen and (min-width: 1200px){
+    /*four column*/
+    
+  li{
+    width:25%;
+  }
+       img:hover{
+        transform:scale(1.4);
+        
+    }
+}
